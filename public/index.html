@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  	<link rel="stylesheet" href="bower_components/toastr/toastr.css">
+	<title>Student Database</title>
+</head>
+<body>
+	<div class="container">
+		<br><br><br>
+		<h1 class="text-center">Student Records</h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Reg ID</th>
+					<th>Name</th>
+					<th>Age</th>
+				</tr>
+				<tr>
+					<td><input class="form-control regid-input"></td>
+					<td><input class="form-control name-input"></td>
+					
+					<td><input class="form-control age-input"></td>
+					<td><button class="btn btn-primary add-record">Add</button></td>
+				</tr>
+			</thead>
+			
+			<tbody class="students-list"></tbody>
+		</table>
+	</div>
+    <hr>
+    
+
+	<script type="text/template" class="students-list-template">
+    
+		<td><span class="regid"><%= regid %></span></td>
+		<td><span class="name"><%= name %></span></td>
+		<td><span class="age"><%= age %></span></td>
+		<td><button class="btn btn-warning btn-sm edit">Edit</button></td>
+		<td><button class="btn btn-danger btn-sm delete">Delete</button></td>
+		<td><button class="btn btn-success btn-sm update">Update</button></td>
+		<td><button class="btn btn-danger btn-sm cancel">Cancel</button></td>
+	</script>
+	
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/backbone/backbone.js"></script>
+	<script src="bower_components/toastr/toastr.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
